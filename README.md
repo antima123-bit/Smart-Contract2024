@@ -1,10 +1,15 @@
 # 🌟 E-Commerce System with Product Recommendations & Price Magic 🌟
 
+[![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg)](https://github.com/yourusername/ecommerce-system)
+[![Contributors](https://img.shields.io/badge/Contributors-1-orange.svg)](https://github.com/yourusername/ecommerce-system/graphs/contributors)\
+
 ## Overview
 This repository contains a comprehensive e-commerce system implementation with features including product management, cart functionality, order placement, product recommendations, and price modification using the Sawtooth wave. It also includes a predictive model for product recommendations and visualizations to analyze product orders.
 
 ## Tables of Contents
-1.Features.
+1.Features
 2.Setup
 3.Usage
 4.Model Training and Evaluation
