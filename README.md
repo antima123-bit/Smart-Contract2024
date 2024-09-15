@@ -32,7 +32,7 @@ This repository contains a comprehensive e-commerce system implementation with f
 ## 💻 Setup
 
 ### Clone the Repository
-git clone https://github.com/yourusername/ecommerce-system.git
+git clone https://github.com/antima123-bit/Smart-Contract2024/edit/main/README.md
 cd ecommerce-system
 
 ## 🛠️ Usage
@@ -94,10 +94,10 @@ Explore the insights with these stunning visualizations:
 
 - **`main.py`:** The heart of the e-commerce system.  
 - **`model.py`:** Where the predictive magic happens.  
-- **`swatooth.py`:** Your guide to Sawtooth wave price modifications.  
-- **`products.csv`:** Sample product data.  
-- **`orders.csv`:** Sample order data.  
-- **`users.csv`:** Sample user data.
+- **`swatooth.py`:** Sawtooth wave price modifications.  
+- **`products.csv`:** product data.  
+- **`orders.csv`:** order data.  
+- **`users.csv`:** user data.
 
 
 ## 📜 License
