@@ -74,20 +74,21 @@ With `swatooth.py`, experience price modifications like never before:
 Explore the insights with these stunning visualizations:
 
 ### 📈 Top 5 Products by Number of Orders
+![IMG-20240810-WA0008](https://github.com/user-attachments/assets/ba9e2689-c192-45c0-94a5-3610728f57c8)
 
-![Top 5 Products](https://via.placeholder.com/600x400.png?text=Top+5+Products+by+Number+of+Orders)
 
 ### 🥧 Average Order Price by Product Category
 
-![Average Order Price](https://via.placeholder.com/600x400.png?text=Average+Order+Price+by+Product+Category)
+![IMG-20240810-WA0007](https://github.com/user-attachments/assets/4d4db86a-9900-49b9-a8af-af719cc2b393)
 
-### 📉 Histogram of Order Prices
+### 📉 Swatooth implement Histogram of Order Prices
+![Figure_1](https://github.com/user-attachments/assets/d86338b1-b4c9-4c89-821f-be05c6a77f15)
 
-![Histogram of Order Prices](https://via.placeholder.com/600x400.png?text=Histogram+of+Order+Prices)
 
 ### 🌡️ Temperature Heatmap
+![IMG-20240810-WA0009](https://github.com/user-attachments/assets/f80a992a-f766-4162-bff8-3aa9914b0770)
 
-![Temperature Heatmap](https://via.placeholder.com/600x400.png?text=Temperature+Heatmap)
+
 
 ## 📁 Files Description
 
