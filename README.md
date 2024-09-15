@@ -1,2 +1,2 @@
-#🌟 E-Commerce System with Product Recommendations & Price Magic 🌟
+# 🌟 E-Commerce System with Product Recommendations & Price Magic 🌟
 
