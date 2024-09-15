@@ -4,14 +4,14 @@
 This repository contains a comprehensive e-commerce system implementation with features including product management, cart functionality, order placement, product recommendations, and price modification using the Sawtooth wave. It also includes a predictive model for product recommendations and visualizations to analyze product orders.
 
 ## Tables of Contents
-🌟 Features /n
-🌟 Setup
-🌟 Usage
-🌟 Model Training and Evaluation
-🌟 Sawtooth Wave Modification
-🌟 Visualizations
-🌟 Files Description
-🌟 License
+1.Features 
+2.Setup
+3.Usage
+4.Model Training and Evaluation
+5.Sawtooth Wave Modification
+6.Visualizations
+7.Files Description
+8.License
 
 ## Features
 1. Product Management: Add, remove, update, and display products.
