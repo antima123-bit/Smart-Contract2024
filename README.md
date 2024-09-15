@@ -14,10 +14,10 @@ This repository contains a comprehensive e-commerce system implementation with f
 🌟 License
 
 ## Features
-### 1. Product Management: Add, remove, update, and display products.
-### 2. Shopping Cart: Add products to the cart and place orders with a simulated transaction failure mechanism.
-### 3. Product Recommendations: Recommend similar products based on the category of a viewed product.
-### 4. Price Modification: Adjust product prices using a Sawtooth wave function.
-### 5. Predictive Model: Build and evaluate a logistic regression model to predict product recommendations.
-### 6. Visualizations: Generate various visualizations, including bar charts, pie charts, and heatmaps.
+1. Product Management: Add, remove, update, and display products.
+2. Shopping Cart: Add products to the cart and place orders with a simulated transaction failure mechanism.
+3. Product Recommendations: Recommend similar products based on the category of a viewed product.
+4. Price Modification: Adjust product prices using a Sawtooth wave function.
+5. Predictive Model: Build and evaluate a logistic regression model to predict product recommendations.
+6. Visualizations: Generate various visualizations, including bar charts, pie charts, and heatmaps.
 
