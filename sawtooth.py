@@ -28,7 +28,7 @@ def create_product_on_chain(product):
         "dependencies": [],
     }
 
-    url = f"{SAWTOOTH_REST_API_URL}/batches"
+    url = f"{https://3f0e-2409-40d0-2017-4c12-d38-528a-3538-8ab4.ngrok.io}/batches"
     headers = {'Content-Type': 'application/octet-stream'}
     response = requests.post(url, headers=headers, data=transaction)
 
