@@ -1,6 +1,11 @@
+import requests
+import hashlib
+import base64
 import numpy as np
-import matplotlib.pyplot as plt
 from scipy.signal import sawtooth
+import matplotlib.pyplot as plt
+
+SAWTOOTH_REST_API_URL = "https://3f0e-2409-40d0-2017-4c12-d38-528a-3538-8ab4.ngrok.io" 
 
 class Product:
     def __init__(self, id, name, price, quantity, category):
@@ -10,25 +15,44 @@ class Product:
         self.quantity = quantity
         self.category = category
 
-#to display products
-def show_products(products, title):
-    print(title)
-    for product in products:
-        print(f"ID: {product.id} | Name: {product.name} | Price: ${product.price:.2f} | Quantity: {product.quantity} | Category: {product.category}")
+def create_product_on_chain(product):
+    product_data = f"{product.id},{product.name},{product.price},{product.quantity},{product.category}"
+    payload = base64.b64encode(product_data.encode()).decode()
+
+    transaction = {
+        "payload": payload,
+        "inputs": [product_address(product.id)],
+        "outputs": [product_address(product.id)],
+        "signer_public_key": "your_public_key",  
+        "batcher_public_key": "your_public_key",  
+        "dependencies": [],
+    }
+
+    url = f"{SAWTOOTH_REST_API_URL}/batches"
+    headers = {'Content-Type': 'application/octet-stream'}
+    response = requests.post(url, headers=headers, data=transaction)
+
+    if response.status_code == 200:
+        print(f"Product {product.name} added to the blockchain.")
+    else:
+        print(f"Failed to add product: {response.text}")
+
+def product_address(product_id):
+    return hashlib.sha512(product_id.encode()).hexdigest()[0:6]
 
 def sawtooth_modification(products):
-  
-    time = np.linspace(0, 10, len(products))  # Generate time values for sawtooth wave
+    time = np.linspace(0, 10, len(products))
     sawtooth_wave = sawtooth(2 * np.pi * time)
     
     print("\nSawtooth wave values applied:")
-    print(sawtooth_wave)  
+    print(sawtooth_wave)
     
     for i, product in enumerate(products):
-        factor = 1 + sawtooth_wave[i] * 0.1 
-        product.price = max(1, product.price * factor) 
+        factor = 1 + sawtooth_wave[i] * 0.1
+        product.price = max(1, product.price * factor)
+        create_product_on_chain(product)  
 
-def plot_prices(products, original_prices, title):
+def plot_prices(products, original_prices):
     product_names = [product.name for product in products]
     modified_prices = [product.price for product in products]
     
@@ -41,7 +65,7 @@ def plot_prices(products, original_prices, title):
     
     plt.xlabel('Products')
     plt.ylabel('Price')
-    plt.title(title)
+    plt.title("Product Prices Before and After Sawtooth Modification")
     plt.xticks(index + bar_width / 2, product_names, rotation=45)
     plt.legend()
     plt.tight_layout()
@@ -61,16 +85,11 @@ def main():
         Product(10, "Desk Lamp", 19.99, 90, "Household")
     ]
     
-    show_products(products, "Original Products:")
-    
-
     original_prices = [product.price for product in products]
     
-    sawtooth_modification(products)
+    sawtooth_modification(products) 
     
-    show_products(products, "\nProducts after Sawtooth Price Modification:")
-    
-    plot_prices(products, original_prices, "Product Prices Before and After Sawtooth Modification")
+    plot_prices(products, original_prices) 
 
 if __name__ == "__main__":
     main()
